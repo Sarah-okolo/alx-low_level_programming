@@ -22,7 +22,7 @@ int main(void)
 	for (i = 0; i < 100; i++)
 	{
 		a = i / 10; /* doubles fnum */
-		b = i % 10; /* singles fnum */ 
+		b = i % 10; /* singles fnum */
 
 		for (j = 0; j < 100; j++)
 		{
