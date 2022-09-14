@@ -11,8 +11,7 @@ int main(void)
 	i = 98 % 2;
 
 		positive_or_negative(i);
-		positive_or_negative('\n')
-
+		positive_or_negative('\n');
 
 		return (0);
 }
