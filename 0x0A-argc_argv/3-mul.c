@@ -11,7 +11,7 @@
 
 int main(int argc, char *argv[])
 {
-	if(argc > 2)
+	if (argc > 2)
 	{
 		int num1 = atoi(argv[1]);
 		int num2 = atoi(argv[2]);
@@ -25,6 +25,4 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-
-	
 }
