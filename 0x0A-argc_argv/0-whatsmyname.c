@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - prints this files' name 
+ * main - prints this files' name
  * @argc: command line argument count
  * @argv: command line argument vector
  *
