@@ -2,8 +2,8 @@
 
 /**
  * main - prints this files' name 
- * @argc: argument count
- * @argv: argument vector
+ * @argc: command line argument count
+ * @argv: command line argument vector
  *
  * Return: Always 0 (Success)
  */
