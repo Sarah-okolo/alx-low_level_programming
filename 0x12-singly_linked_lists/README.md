@@ -8,6 +8,7 @@ Return: the number of nodes.
 If str is NULL, print [0] (nil).
 
 ##[1.List length](url)
+
 **A function that returns the number of elements in a linked list_t list.
 
 Prototype: size_t list_len(const list_t h);**
