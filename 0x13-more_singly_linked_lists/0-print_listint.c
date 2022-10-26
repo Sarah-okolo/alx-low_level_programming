@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
-**print_listint - prints all the elements of a listint_t list
+*print_listint - prints all the elements of a listint_t list
 *
 *@h: pointer to the first node in the linked list
 *
@@ -15,7 +15,7 @@ size_t print_listint(const listint_t *h)
 
 	while (h != NULL)
 	{
-		printf("%u\n", h->n);
+		printf("%.d\n", h->n);
 		h = h->next;
 		count++;
 	}
