@@ -1,7 +1,8 @@
-#TASKS
-##synopsis
-__This directory contains solutions to all the  tasks that were given for the (0x15. C - File I/O) project from ALX.
-Below is all the tasks that were given, you can access their solutions by clicking on their respective header links.__
+# TASKS
+
+## synopsis
+This directory contains solutions to all the  tasks that were given for the __(0x15. C - File I/O)__ project from ALX.
+Below is all the tasks that were given, you can access their solutions by clicking on their respective header links.
 
 ### [0-read\_textfile.c](0-read_textfile.c)
 - Write a function that reads a text file and prints it to the POSIX standard output.
