@@ -29,6 +29,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		readfnrv = read(fdnum, buffer, letters);
 
 		write(STDOUT_FILENO, buffer, letters);
+		write(STDOUT_FILENO, "\n", 1);
 
 		close(fdnum);
 		free(buffer);
