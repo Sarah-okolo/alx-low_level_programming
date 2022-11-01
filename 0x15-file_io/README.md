@@ -1,6 +1,6 @@
-# TASKS
+# TASKS 🗂️
 
-## synopsis
+## synopsis 📃
 This directory contains solutions to all the  tasks that were given for the __(0x15. C - File I/O)__ project from ALX.
 Below is all the tasks that were given, you can access their solutions by clicking on their respective header links.
 
