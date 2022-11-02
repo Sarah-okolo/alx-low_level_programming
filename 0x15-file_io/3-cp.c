@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 
 int copy(char *file_from, char *file_to)
 {
-	int file_d1, file_d2, byts, wr_to;
+	int file_d1, file_d2, rd_frm, wr_to;
 	char *BUFF;
 
 	BUFF = malloc(1024 * sizeof(char));
@@ -54,8 +54,8 @@ int copy(char *file_from, char *file_to)
 	}
 	else
 	{
-		read(file_d1, BUFF, byts);
-		wr_to = write(file_d2, BUFF, byts);
+		rd_frm = read(file_d1, BUFF, 1024);
+		wr_to = write(file_d2, BUFF, rd_frm);
 
 		if (wr_to == -1 || file_d2 == -1 || BUFF == NULL)
 		{
