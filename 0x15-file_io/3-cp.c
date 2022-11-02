@@ -44,7 +44,7 @@ int copy(char *file_from, char *file_to)
 	byts = 1024;
 
 	file_d1 = open(file_from, O_RDONLY);
-	file_d2 = open(file_to, O_RDWR | O_CREAT |     O_TRUNC, 0664);
+	file_d2 = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 
 	if (file_d1 == -1)
 	{
