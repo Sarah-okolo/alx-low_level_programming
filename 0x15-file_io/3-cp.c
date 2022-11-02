@@ -41,7 +41,6 @@ int copy(char *file_from, char *file_to)
 	char *BUFF;
 
 	BUFF = malloc(1024 * sizeof(char));
-	byts = 1024;
 
 	file_d1 = open(file_from, O_RDONLY);
 	file_d2 = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
