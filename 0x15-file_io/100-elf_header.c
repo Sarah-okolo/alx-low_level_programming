@@ -29,10 +29,8 @@ int index;
 
 for (index = 0; index < 4; index++)
 {
-if (e_ident[index] != 127 &&
-    e_ident[index] != 'E' &&
-    e_ident[index] != 'L' &&
-    e_ident[index] != 'F')
+if (e_ident[index] != 127 && e_ident[index] != 'E'
+&& e_ident[index] != 'L' && e_ident[index] != 'F')
 {
 dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
 exit(98);
@@ -73,17 +71,17 @@ printf("Class: ");
 
 switch (e_ident[EI_CLASS])
 {
-case ELFCLASSNONE:
-printf("none\n");
-break;
-case ELFCLASS32:
-printf("ELF32\n");
-break;
-case ELFCLASS64:
-printf("ELF64\n");
-break;
-default:
-printf("<unknown: %x>\n", e_ident[EI_CLASS]);
+	case ELFCLASSNONE:
+	printf("none\n");
+	break;
+	case ELFCLASS32:
+	printf("ELF32\n");
+	break;
+	case ELFCLASS64:
+	printf("ELF64\n");
+	break;
+	default:
+	printf("<unknown: %x>\n", e_ident[EI_CLASS]);
 }
 }
 
@@ -117,8 +115,7 @@ printf("<unknown: %x>\n", e_ident[EI_CLASS]);
 */
 void print_version(unsigned char *e_ident)
 {
-printf("  Version:                           %d",
-       e_ident[EI_VERSION]);
+printf("Version: %d", e_ident[EI_VERSION]);
 
 switch (e_ident[EI_VERSION])
 {
@@ -137,7 +134,7 @@ break;
 */
 void print_osabi(unsigned char *e_ident)
 {
-printf("  OS/ABI:                            ");
+printf("OS/ABI: ");
 
 switch (e_ident[EI_OSABI])
 {
@@ -182,8 +179,7 @@ printf("<unknown: %x>\n", e_ident[EI_OSABI]);
 */
 void print_abi(unsigned char *e_ident)
 {
-printf("  ABI Version:                       %d\n",
-       e_ident[EI_ABIVERSION]);
+printf("ABI Version: %d\n", e_ident[EI_ABIVERSION]);
 }
 
 /**
@@ -196,7 +192,7 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 if (e_ident[EI_DATA] == ELFDATA2MSB)
 e_type >>= 8;
 
-printf("  Type:                              ");
+printf("Type: ");
 
 switch (e_type)
 {
@@ -227,12 +223,11 @@ printf("<unknown: %x>\n", e_type);
 */
 void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 {
-printf("  Entry point address:               ");
+printf("Entry point address: ");
 
 if (e_ident[EI_DATA] == ELFDATA2MSB)
 {
-e_entry = ((e_entry << 8) & 0xFF00FF00) |
-  ((e_entry >> 8) & 0xFF00FF);
+e_entry = ((e_entry << 8) & 0xFF00FF00) | ((e_entry >> 8) & 0xFF00FF);
 e_entry = (e_entry << 16) | (e_entry >> 16);
 }
 
